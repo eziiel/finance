@@ -2,25 +2,15 @@
   "name": "finance",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "next": "16.4.3",
-    "react": "19.3.0",
-    "react-dom": "19.3.0"
-  },
-  "devDependencies": {
-    "@tailwindcss/turbopack": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.4.3",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "dev:web": "npm run dev --workspace=@finance/web",
+    "build:web": "npm run build --workspace=@finance/web",
+    "lint:web": "npm run lint --workspace=@finance/web",
+    "dev:api": "npm run start:dev --workspace=@finance/api",
+    "build:api": "npm run build --workspace=@finance/api",
+    "test:api": "npm run test --workspace=@finance/api"
   }
 }
